@@ -6,7 +6,7 @@
 
 struct Mahasiswa {
   char nama[127];
-  float nilai;
+  int statusKelulusan;
 };
 
 int main(){
@@ -17,22 +17,22 @@ int main(){
   for (int i = 0; i < lengthOfArrMhs; i++) {
     printf("Masukkan nama mhs ke-%d: ", i+1);
     scanf("%[^\n]s", arrMhs[i].nama);
-    printf("Masukkan nilai mhs ke-%d: ", i+1);
-    scanf("%f", &arrMhs[i].nilai);
+    printf("Masukkan statusKelulusan mhs ke-%d: ", i+1);
+    scanf("%d", &arrMhs[i].statusKelulusan);
     fflush(stdin);
   }
   
   for (int i = 0; i < lengthOfArrMhs; i++) {
     printf("Nama mhs ke-%d: %s\n", i+1, arrMhs[i].nama);
-    printf("Nilai: %f\n", arrMhs[i].nilai);
+    printf("Nilai: %d\n", arrMhs[i].statusKelulusan);
   }
   
   int jmlMhsLulus = 0;
   int jmlMhsBlmLulus = 0;
   
   for (int i = 0; i < lengthOfArrMhs; i++) {
-    if (arrMhs[i].nilai == 1) jmlMhsLulus++;
-    if (arrMhs[i].nilai == 2) jmlMhsBlmLulus++;
+    if (arrMhs[i].statusKelulusan == 1) jmlMhsLulus++;
+    if (arrMhs[i].statusKelulusan == 2) jmlMhsBlmLulus++;
   }
   
   printf("Jml Lulus: %d\n", jmlMhsLulus);
