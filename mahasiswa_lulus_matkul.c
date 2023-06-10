@@ -37,9 +37,14 @@ int main(){
   
   printf("Jml Lulus: %d\n", jmlMhsLulus);
   printf("Jml Tidak Lulus: %d\n", jmlMhsBlmLulus);
-  printf("Total Mhs: %d", lengthOfArrMhs);
+  printf("Total Mhs: %d\n", lengthOfArrMhs);
   
-  if (jmlMhsLulus/lengthOfArrMhs > 80) printf("Kelulusan kelas telah mencapai target!\n");
+  float persentaseKelulusan = (float)jmlMhsLulus/(float)lengthOfArrMhs;
+  
+  printf("%f\n", persentaseKelulusan);
+  
+  // Syarat terpenuhi adalah LEBIH DARI  80 persen, bukan LEBIH DARI SAMA DENGAN 80 persen
+  if (persentaseKelulusan > .8) printf("Kelulusan kelas telah mencapai target!\n");
   
   getchar();
   
