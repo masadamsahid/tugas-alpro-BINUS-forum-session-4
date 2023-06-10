@@ -17,15 +17,21 @@ int main(){
   for (int i = 0; i < lengthOfArrMhs; i++) {
     printf("Masukkan nama mhs ke-%d: ", i+1);
     scanf("%[^\n]s", arrMhs[i].nama);
-    printf("Masukkan statusKelulusan mhs ke-%d: ", i+1);
+    printf("Masukkan status kelulusan (1=Lulus, 2=Tidak Lulus): ");
     scanf("%d", &arrMhs[i].statusKelulusan);
     fflush(stdin);
   }
   
+  printf("\n=======================================================================================\n\n");
+  
+  printf("%8s | %-32s | %s\n", "No. Urut", "Nama Mahasiswa", "Status Kelulusan");
   for (int i = 0; i < lengthOfArrMhs; i++) {
-    printf("Nama mhs ke-%d: %s\n", i+1, arrMhs[i].nama);
-    printf("Nilai: %d\n", arrMhs[i].statusKelulusan);
+    /*printf("Nama mhs ke-%d: %s\n", i+1, arrMhs[i].nama);
+    printf("Nilai: %d\n", arrMhs[i].statusKelulusan);*/
+    printf("%8d | %-32s | %s\n", i+1, arrMhs[i].nama, arrMhs[i].statusKelulusan == 1 ? "PASS" : "FAILED");
   }
+  
+  printf("\n=======================================================================================\n");
   
   int jmlMhsLulus = 0;
   int jmlMhsBlmLulus = 0;
@@ -37,14 +43,16 @@ int main(){
   
   printf("Jml Lulus: %d\n", jmlMhsLulus);
   printf("Jml Tidak Lulus: %d\n", jmlMhsBlmLulus);
-  printf("Total Mhs: %d\n", lengthOfArrMhs);
+  printf("Total Mhs: %d\n\n", lengthOfArrMhs);
   
   float persentaseKelulusan = (float)jmlMhsLulus/(float)lengthOfArrMhs;
   
-  printf("%f\n", persentaseKelulusan);
+  printf("Persentase kelulusan: %.2f%%", persentaseKelulusan*100);
   
-  // Syarat terpenuhi adalah LEBIH DARI  80 persen, bukan LEBIH DARI SAMA DENGAN 80 persen
-  if (persentaseKelulusan > .8) printf("Kelulusan kelas telah mencapai target!\n");
+  printf("\n=======================================================================================\n\n");
+  
+  // Syarat terpenuhi adalah LEBIH DARI 80, bukan LEBIH DARI SAMA DENGAN 80
+  if (jmlMhsLulus > 80) printf("Kelulusan kelas telah mencapai target!\n");
   
   getchar();
   
