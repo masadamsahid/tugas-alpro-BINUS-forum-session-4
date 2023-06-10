@@ -43,4 +43,4 @@ Kelulusan kelas telah mencapai target!
 
 ```
 
-> NOTE: You can also try the program using the dummy data provided in this repo.
+> NOTE: You can also try the program using the [dummy data](./dummy%20data) provided in this repo.
