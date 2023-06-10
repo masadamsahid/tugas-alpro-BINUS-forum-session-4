@@ -32,9 +32,9 @@ No. Urut | Nama Mahasiswa          | Status Kelulusan
 
 =======================================================================================
 
-Jml Lulus      :    [Jml Mhs PASS]
-Jml Tidak Lulus   :    [Jml Mhs FAILED]
-Total Mhs      :   [Jml Mhs]
+Jml Lulus            :           [Jml Mhs PASS]
+Jml Tidak Lulus      :         [Jml Mhs FAILED]
+Total Mhs            :                [Jml Mhs]
 
 Persentase kelulusan :  [Persentase Kelulusan]%
 =======================================================================================
