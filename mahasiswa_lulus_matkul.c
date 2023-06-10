@@ -41,13 +41,13 @@ int main(){
     if (arrMhs[i].statusKelulusan == 2) jmlMhsBlmLulus++;
   }
   
-  printf("Jml Lulus: %d\n", jmlMhsLulus);
-  printf("Jml Tidak Lulus: %d\n", jmlMhsBlmLulus);
-  printf("Total Mhs: %d\n\n", lengthOfArrMhs);
+  printf("%-21s: %8d\n", "Jml Lulus", jmlMhsLulus);
+  printf("%-21s: %8d\n", "Jml Tidak Lulus", jmlMhsBlmLulus);
+  printf("%-21s: %8d\n\n", "Total Mhs", lengthOfArrMhs);
   
   float persentaseKelulusan = (float)jmlMhsLulus/(float)lengthOfArrMhs;
   
-  printf("Persentase kelulusan: %.2f%%", persentaseKelulusan*100);
+  printf("%-21s: %7.2f%%", "Persentase kelulusan", persentaseKelulusan*100);
   
   printf("\n=======================================================================================\n\n");
   
