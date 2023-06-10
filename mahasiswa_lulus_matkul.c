@@ -37,6 +37,9 @@ int main(){
   
   printf("Jml Lulus: %d\n", jmlMhsLulus);
   printf("Jml Tidak Lulus: %d\n", jmlMhsBlmLulus);
+  printf("Total Mhs: %d", lengthOfArrMhs);
+  
+  if (jmlMhsLulus/lengthOfArrMhs > 80) printf("Kelulusan kelas telah mencapai target!\n");
   
   getchar();
   
