@@ -27,7 +27,16 @@ int main(){
     printf("Nilai: %f\n", arrMhs[i].nilai);
   }
   
-  printf("%d\n", lengthOfArrMhs);
+  int jmlMhsLulus = 0;
+  int jmlMhsBlmLulus = 0;
+  
+  for (int i = 0; i < lengthOfArrMhs; i++) {
+    if (arrMhs[i].nilai == 1) jmlMhsLulus++;
+    if (arrMhs[i].nilai == 2) jmlMhsBlmLulus++;
+  }
+  
+  printf("Jml Lulus: %d\n", jmlMhsLulus);
+  printf("Jml Tidak Lulus: %d\n", jmlMhsBlmLulus);
   
   getchar();
   
