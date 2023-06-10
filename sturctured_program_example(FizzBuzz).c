@@ -17,15 +17,12 @@ int main(){
   fflush(stdin);
   
   if(n >= 1 && n <= 10000){
-    bool isLooping = true;
-    int i = 1;
-    do {
+    
+    for (int i=1; i<=n; i++) {
       if(i%3 != 0) printf("%5d | Fizz\n", i);
       else printf("%5d | Buzz\n", i);
-      
-      i++;
-      if(i > n) isLooping = false;
-    } while (isLooping);
+    }
+    
   } else {
     printf("Invalid provided number\n");
   }
