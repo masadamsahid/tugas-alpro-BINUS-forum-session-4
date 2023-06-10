@@ -17,11 +17,14 @@ int main(){
   for (int i = 0; i < lengthOfArrMhs; i++) {
     printf("Masukkan nama mhs ke-%d: ", i+1);
     scanf("%[^\n]s", arrMhs[i].nama);
+    printf("Masukkan nilai mhs ke-%d: ", i+1);
+    scanf("%f", &arrMhs[i].nilai);
     fflush(stdin);
   }
   
   for (int i = 0; i < lengthOfArrMhs; i++) {
     printf("Nama mhs ke-%d: %s\n", i+1, arrMhs[i].nama);
+    printf("Nilai: %f\n", arrMhs[i].nilai);
   }
   
   printf("%d\n", lengthOfArrMhs);
