@@ -15,7 +15,7 @@ int main(){
   int lengthOfArrMhs = sizeof(arrMhs)/sizeof(arrMhs[0]);
   
   for (int i = 0; i < lengthOfArrMhs; i++) {
-    printf("Masukkan nama mhs ke-%d", i+1);
+    printf("Masukkan nama mhs ke-%d: ", i+1);
     scanf("%[^\n]s", arrMhs[i].nama);
     printf("\n");
     fflush(stdin);
